@@ -40,22 +40,28 @@
 
             const edit = document.createElement("p");
             edit.innerHTML = "<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M3 17.25V21H6.75L17.81 9.94L14.06 6.19L3 17.25ZM20.71 7.04C21.1 6.65 21.1 6.02 20.71 5.63L18.37 3.29C17.98 2.9 17.35 2.9 16.96 3.29L15.13 5.12L18.88 8.87L20.71 7.04V7.04Z' fill='black'/></svg>"
-            edit.classList.add("edit");
+            edit.classList.add("editar");
             card.appendChild(edit);
-
+            
             const del = document.createElement("p");
             del.innerHTML = "<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4ZM6 7V19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6ZM14 14V18H10V14H8L12 10L16 14H14Z' fill='black'/></svg>"
-            del.classList.add("del");
+            del.classList.add("deletar");
             card.appendChild(del);
 
 
             main.appendChild(card);
         })
+
+        openModalEdit();
+        openModalDel();
     }
        function openModalEdit(){
-        document.querySelectorAll(".AskTips .editar").forEach(btEdit=>{
-        btEdit.addEventListener("click",()=>{
-           
+        document.querySelectorAll(".editar").forEach(btEdit=>{
+            console.log("teste");
+            console.log(modal)
+       btEdit.addEventListener("click",()=>{
+            console.log("teste");
+            
             if(modal.style.display == ""){
                 modal.style.display = "flex"
             }else{
@@ -63,11 +69,13 @@
             }
     
         })
+
+       
     })
 }
 
       function openModalDel(){
-       document.querySelectorAll(".AskTips .deletar").forEach(btDel=>{
+       document.querySelectorAll(".deletar").forEach(btDel=>{
         btDel.addEventListener("click",()=>{
            if(modalDel.style.display==""){
                modalDel.style.display = "flex"
@@ -104,12 +112,13 @@
 
 
     function init(){
+        getUser();
         closeModais();
-        openModalEdit();
-        openModalDel();
+       
+          
     }
 
     init(); 
     
-    getUser();
+    
 })();
