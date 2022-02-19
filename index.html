@@ -7,8 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+
     <link rel = "stylesheet" href="./style/index.css"/>
+    
     <title>Devedores</title>
+   
 </head>
 <body>
     <h1>Dashboard</h1>
@@ -86,7 +89,7 @@
     </div>  
     
         <form name="formEdit">
-            <label>Nome</label>
+            <label>Nome<span>*</span></label>
             <input type = "text" name="nameEdit"></input>
 
             <label>Email<span>*</span></label>
@@ -100,10 +103,51 @@
             <input type = "text" name="universityEdit"></input>
             
             <button type="submit">Cadastrar</button>
-        </form>
-   
+        </form>  
     </div>  
     </section>
+
+
+
+    <div class="modal-container" id="modal">
+        <div class="modal-content">
+          <h3>Editar os dados de Caio Bruno</h1>
+
+          <form>
+            <div class="duoForm">
+              <div class="labelInputColumn">
+                <label for="Email">Nome</label>
+                <input type="email" name="Email" />
+              </div>
+
+              <div class="labelInputColumn">
+                <label for="confEmail">Descrição</label>
+                <input type="email" name="confEmail" />
+              </div>
+            </div>
+
+            <div class="duoForm">
+              <div class="labelInputColumn">
+                <label for="Password">Email</label>
+                <input type="password" name="Password" />
+              </div>
+
+              <div class="labelInputColumn">
+                <label for="confPasswrd">Gênero</label>
+                <input type="password" name="confPasswrd" />
+              </div>
+            </div>
+
+            <button>Alterar dados</button>
+          </form>
+        </div>
+        <a class="botaoFechar" href="javascript:void(0)" onclick="fecharModal()"
+          ><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg%22%3E
+          <path d="M19.3334 2.54669L17.4534 0.666687L10 8.12002L2.54669 0.666687L0.666687 2.54669L8.12002 10L0.666687 17.4534L2.54669 19.3334L10 11.88L17.4534 19.3334L19.3334 17.4534L11.88 10L19.3334 2.54669Z" fill="white"/>
+          </svg></a>
+      </div>
    </main>    
+   <script src="./js/script.js"></script>
 </body>
+
 </html>
