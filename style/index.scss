@@ -1,0 +1,230 @@
+@import "./global.scss";
+
+
+h1{
+    font-weight: 400;
+    font-style: normal;
+    font-size:45px;
+    font-family: Roboto, sans-serif;
+    color:#FFFFFF;
+    text-align:center;    
+}
+
+main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ListForms{
+    display: flex;
+    flex-direction: row;
+    margin-left:59px;
+    
+}
+.ListFriends{
+    background-color:#474554;
+    width: 1126px;
+    height: 429px;
+    border-radius:6px;
+  
+}
+
+.ListFriends h2{
+    font-family: Roboto, sans-serif;
+    font-style:normal;
+    font-size:40px;
+    color: #FFFFFF;
+    text-align: center;
+    
+}
+
+.ListTable{
+    width:731px;
+    height: 277px;
+    padding-left:10px;
+    border-radius:8px;
+    background-color: #C4C4C4;
+    overflow-x:hidden;
+    overflow-y:auto;
+
+   
+}
+
+
+.ListTable::-webkit-scrollbar-track {
+    background-color: #EAE9E9;
+    margin:40px 0 30px 0;
+  
+   
+    
+}
+.ListTable::-webkit-scrollbar {
+    width: 13px;
+    background: #EAE9E9;
+   
+    
+   
+}
+.ListTable::-webkit-scrollbar-thumb {
+    background: #000000;
+    background-clip: content-box;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ListTips {
+    display:flex;
+    flex-direction:row;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 14px; 
+    width:693px;
+    border-bottom: 1px solid #939393;  
+   
+}
+
+
+.ListTips p{
+   padding-top:11.87px;
+   padding-right:54px;
+}
+
+.ListTips .nome{
+    padding-right:74px;
+}
+
+.ListTips .email{
+   padding-right:139px;
+}
+
+.ListTips .genero{
+    padding-right:60px;
+}
+
+.ListTips .descricao{
+     padding-right:92px;
+
+}
+
+.ListTips .editar{
+    padding-right:62px;
+
+}
+
+.ListTips .deletar{
+    padding-right:29px;
+}
+
+
+.AskTips{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    width:693px;
+    border-bottom: 1px solid #939393; 
+    
+
+}
+
+.AskTips p{
+   padding-top:11.87px;
+   padding-right:54px;
+   font-size: 14px;
+   line-height: 16px;
+   font-weight: normal;
+
+}
+
+.AskTips .nome{
+    padding-right:64px;
+}
+
+.AskTips .email{
+   padding-right:75px;
+}
+
+.AskTips .genero{
+    padding-right:30px;
+}
+
+.AskTips .descricao{
+     padding-right:22px;
+
+}
+
+.AskTips .editar{
+    padding-right:72px;
+
+}
+
+.AskTips .deletar{
+    padding-right:29px;
+}
+
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  background-color: #C4C4C4;
+  height:277px;
+  width: 261px;
+  padding-left:13px;
+  padding-right:38px;
+  margin-left:42px;
+  font-family:Roboto,sans-serif;
+  font-weight: 500;
+  font-style:normal;
+  font-size:16px; 
+
+}
+
+form button{
+    background-color: #FFBE6B;
+    width:103px;
+    height: 25px;
+    border-radius: 8px;
+    text-decoration:none;
+    line-height: 14px;
+    font-size:12px;
+    border:none;
+    cursor: pointer;
+    margin-top:10px;
+}
+
+
+form input{
+    background-color:#11055B;
+    width: 210px;
+    height:18.31px;
+    border-radius:4px;
+    border:none;
+    color:#FFFFFF;   
+    margin-bottom:2px;
+}
+
+form label{
+   margin-bottom:2px;
+   padding-top:17px;
+   
+  
+    
+}
+form span{
+    color:#DA1111;
+}
