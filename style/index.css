@@ -337,4 +337,75 @@ form span {
   text-align: center;
   padding-top: 6px;
 }
+
+#modalDel {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 1280px;
+  height: 720px;
+}
+
+.modal-container-del {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-container-del h3 {
+  font-size: 40px;
+  font-family: Roboto, sans-serif;
+  font-weight: bolder;
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 190px;
+}
+
+.btsDel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.btDel {
+  background-color: #DC3741;
+  border-radius: 8px;
+  width: 140px;
+  height: 57px;
+  border: none;
+  color: #ffffff;
+  margin-right: 316px;
+  font-size:24px;
+}
+
+.btCanc {
+  background-color: #7066E0;
+  border-radius: 8px;
+  width: 140px;
+  height: 57px;
+  border: none;
+  color: #000000;
+  font-weight: bolder;
+  font-size:24px;
+}
 /*# sourceMappingURL=index.css.map */

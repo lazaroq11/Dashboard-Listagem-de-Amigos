@@ -248,8 +248,8 @@ form span{
     font-style: normal;
     text-align: center;
     margin-left:15px;
-  
   }
+
   .labelInputColumn{
       padding-right:38px;
       padding-left:31px;
@@ -300,4 +300,60 @@ form span{
     top: 151px;
     text-align: center;
     padding-top: 6px;
+  }
+
+  #modalDel {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 1280px;
+    height: 720px;
+  }
+
+  .modal-container-del{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+
+
+  .modal-container-del h3{
+      font-size:40px;
+      font-family: Roboto, sans-serif;
+      font-weight: bolder;
+      color:#ffffff;
+      text-align: center;
+      padding-bottom:190px;
+  }
+
+  .btsDel{
+      display:flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    
+     
+  }
+
+   .btDel{
+    background-color: #DC3741;
+    border-radius:8px;
+    width:140px;
+    height:57px;
+    border:none;
+    color:#ffffff;
+    margin-right:316px;
+
+  }
+
+  .btCanc{
+    background-color: #7066E0;
+    border-radius:8px;
+    width:140px;
+    height:57px;
+    border:none;
+    color:#ffffff;
   }
