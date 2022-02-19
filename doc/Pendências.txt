@@ -1,6 +1,0 @@
-- For each nos usuários;
--Ajustar alinhamento na tela de edição;
-- Verificar os campos obrigatórios;
-- Os três pontos nos campos /;
--Os ícones dos botões de editar e excluir;
-- alinhar a tabela;

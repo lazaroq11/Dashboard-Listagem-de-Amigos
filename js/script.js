@@ -1,13 +1,16 @@
-let btEdit = document.querySelector(".AskTips .editar")
-let btDel = document.querySelector(".AskTips .deletar")
-let btCanc = document.querySelector(".modal-container-del .btCanc")
-let btFecha = document.querySelector(".botaoFechar")
+
 let modalEdit = document.querySelector("#modal");
+let nome = document.querySelector(".formEdit  .nameEdit")
+let email = document.querySelector(".formEdit  .emailEdit")
+let genero = document.querySelector(".formEdit  .generoEdit")
+let descricao = document.querySelector(".formEdit  .descEdit")
+let requiredCamp = document.querySelector(".formEdit .reqCamp")
 let modalDel = document.querySelector("#modalDel")
 
-let contador = 0;
- 
 
+
+   
+    document.querySelectorAll(".AskTips .editar").forEach(btEdit=>{
     btEdit.addEventListener("click",()=>{
        
         if(modal.style.display == ""){
@@ -17,7 +20,8 @@ let contador = 0;
         }
 
     })
-    
+})
+    document.querySelectorAll(".botaoFechar").forEach(btFecha=>{
     btFecha.addEventListener("click",()=>{
         if(modal.style.display == ""){
             modal.style.display = "flex"
@@ -25,7 +29,8 @@ let contador = 0;
             modal.style.display = ""
         }
     })
-
+})
+    document.querySelectorAll(".AskTips .deletar").forEach(btDel=>{
     btDel.addEventListener("click",()=>{
        if(modalDel.style.display==""){
            modalDel.style.display = "flex"
@@ -33,7 +38,8 @@ let contador = 0;
            modalDel.style.display = ""
        }
     })
-
+})
+    document.querySelectorAll(".modal-container-del .btCanc").forEach(btCanc=>{
     btCanc.addEventListener("click",()=>{
         if(modalDel.style.display==""){
             modalDel.style.display = "flex"
@@ -41,3 +47,5 @@ let contador = 0;
             modalDel.style.display = ""
         }
     })
+})
+    

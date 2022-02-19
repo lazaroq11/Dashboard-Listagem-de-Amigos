@@ -79,16 +79,15 @@ main {
 
 .ListTable::-webkit-scrollbar-track {
   background-color: #EAE9E9;
-  margin: 40px 0 30px 0;
+  margin: 20px 0px 20px 0px;
 }
 
 .ListTable::-webkit-scrollbar {
   width: 13px;
-  background: #EAE9E9;
 }
 
 .ListTable::-webkit-scrollbar-thumb {
-  background: #000000;
+  background: #272727;
   background-clip: content-box;
 }
 
@@ -150,6 +149,8 @@ main {
           justify-content: space-between;
   width: 693px;
   border-bottom: 1px solid #939393;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .AskTips p {
@@ -158,6 +159,9 @@ main {
   font-size: 14px;
   line-height: 16px;
   font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .AskTips .nome {
@@ -178,10 +182,12 @@ main {
 
 .AskTips .editar {
   padding-right: 72px;
+  cursor: pointer;
 }
 
 .AskTips .deletar {
   padding-right: 29px;
+  cursor: pointer;
 }
 
 form {
@@ -195,13 +201,13 @@ form {
   background-color: #C4C4C4;
   height: 277px;
   width: 261px;
-  padding-left: 13px;
-  padding-right: 38px;
+  padding-right: 48px;
   margin-left: 42px;
   font-family: Roboto,sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 16px;
+  padding-left: 13px;
 }
 
 form button {
@@ -236,12 +242,30 @@ form span {
   color: #DA1111;
 }
 
+form p {
+  margin-top: 2px;
+  color: #DA1111;
+  font-size: 11px;
+  display: none;
+}
+
+form select {
+  background-color: #11055B;
+  width: 210px;
+  height: 18.31px;
+  border-radius: 4px;
+}
+
+select option {
+  color: #FFFFFF;
+}
+
 #modal {
   display: none;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.9);
-  width: 1366px;
-  height: 768px;
+  width: 1280px;
+  height: 720px;
 }
 
 .modal-content {
@@ -262,9 +286,8 @@ form span {
           align-items: center;
   width: 478px;
   height: 345px;
-  left: 343px;
-  top: 168px;
-  padding-top: 28px;
+  left: 399px;
+  top: 176px;
 }
 
 .modal-content h3 {
@@ -274,13 +297,12 @@ form span {
   font-weight: 700;
   font-style: normal;
   text-align: center;
-  margin-left: 15px;
 }
 
 .labelInputColumn {
   padding-right: 38px;
   padding-left: 31px;
-  padding-bottom: 20px;
+  padding-bottom: 38px;
 }
 
 .labelInputColumn label {
@@ -306,6 +328,9 @@ form span {
   background-color: #FFBE6B;
   border-radius: 8px;
   font-size: 16px;
+  padding-left: 10px;
+  margin-left: 15px;
+  margin-top: 10px;
 }
 
 .duoForm {
@@ -332,10 +357,11 @@ form span {
   width: 35px;
   height: 34px;
   border-radius: 20px;
-  left: 800px;
-  top: 151px;
+  left: 860px;
+  top: 161px;
   text-align: center;
   padding-top: 6px;
+  cursor: pointer;
 }
 
 #modalDel {
@@ -395,7 +421,6 @@ form span {
   border: none;
   color: #ffffff;
   margin-right: 316px;
-  font-size:24px;
 }
 
 .btCanc {
@@ -404,8 +429,7 @@ form span {
   width: 140px;
   height: 57px;
   border: none;
-  color: #000000;
-  font-weight: bolder;
-  font-size:24px;
+  color: #ffffff;
+  cursor: pointer;
 }
 /*# sourceMappingURL=index.css.map */
