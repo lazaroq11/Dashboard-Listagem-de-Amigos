@@ -126,8 +126,7 @@ main{
     justify-content: space-between;
     width:693px;
     border-bottom: 1px solid #939393; 
-    overflow: hidden;
-    text-overflow: ellipsis;
+  
     
 
 }
@@ -138,27 +137,37 @@ main{
    font-size: 14px;
    line-height: 16px;
    font-weight: normal;
-   overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+
 
 }
 
 .AskTips .nome{
     padding-right:64px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     
 }
 
 .AskTips .email{
    padding-right:75px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
 }
 
 .AskTips .genero{
     padding-right:30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .AskTips .descricao{
      padding-right:22px;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
 
 }
 
@@ -172,6 +181,7 @@ main{
     padding-right:29px;
     cursor:pointer;
 }
+
 
 
 
@@ -238,7 +248,10 @@ form select{
     background-color:#11055B;
     width: 210px;
     height: 18.31px;
-    border-radius: 4px;    
+    border-radius: 4px;  
+    font-family: Roboto, sans-serif;  
+    font-size:12px;
+    color:#EAE9E9;
 }
 
  select option{
@@ -392,6 +405,7 @@ form select{
     width:140px;
     height:57px;
     border:none;
-    color:#ffffff;
+    font-weight: bolder;
+    color:#000000;
     cursor:pointer;
   }

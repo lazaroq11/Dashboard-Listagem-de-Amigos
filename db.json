@@ -1,0 +1,11 @@
+{
+    "friends":[
+        {
+            "id": 1,
+            "name":"Lázaro",
+            "email":"lazaroq11@gmail.com",
+            "description":"Não sabe de nada",
+            "gender":"Masculino"
+        }
+    ]
+}
