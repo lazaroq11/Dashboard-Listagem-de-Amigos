@@ -62,7 +62,7 @@
         <div class="modal-content">
           <h3>Editar os dados de Caio Bruno</h1>
 
-          <form>
+          <form class="formModalEdit">
             <div class="duoForm">
               <div class="labelInputColumn">
                 <label for="Email">Nome</label>
@@ -83,7 +83,12 @@
 
               <div class="labelInputColumn">
                 <label for="confPasswrd">Gênero</label>
-                <input type="password" name="confPasswrd" />
+                <select name="genero">
+                  <option value=""></option>
+                  <option value="masc">Masculino</option>
+                  <option value="fem">Feminino</option>
+                  <option value="outro">Outro</option>
+                </select>
               </div>
             </div>
 

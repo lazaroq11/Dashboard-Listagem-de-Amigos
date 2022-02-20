@@ -359,6 +359,20 @@ select option {
           align-items: center;
 }
 
+.modal-content form select {
+  background-color: #11055B;
+  width: 194px;
+  height: 18.31px;
+  border-radius: 4px;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  color: #EAE9E9;
+}
+
+.duoForm select option {
+  color: #FFFFFF;
+}
+
 .botaoFechar {
   position: absolute;
   color: #ffffff;
