@@ -18,7 +18,7 @@
             card.classList.add("AskTips")
                   
             const name = document.createElement("p");
-            name.classList.add(".nome");
+            name.classList.add("nome");
             name.textContent = friends.name;
             card.appendChild(name);
         
