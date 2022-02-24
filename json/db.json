@@ -1,13 +1,6 @@
 {
   "friends": [
     {
-      "id": 2,
-      "name": "Lázaro Queiroz",
-      "email": "lazaroq11@gmail.com",
-      "description": "Não sabe de nada inocente",
-      "gender": "Masculino"
-    },
-    {
       "id": 3,
       "name": "Vanessa",
       "email": "nessa.martinsgomes@gmail.com",

@@ -5,7 +5,7 @@
     let listUser = [];
     
     
-    async function getUser() {
+    async function getUser(){
         let response = await fetch(`${baseURL}/friends`);
         let userList = await response.json();
         listUser = userList;
@@ -54,40 +54,41 @@
         openModalEdit();
         openModalDel();
     }
-       function openModalEdit(){
-        document.querySelectorAll(".editar").forEach(btEdit=>{
-        btEdit.addEventListener("click",()=>{
-     
-            if(modal.style.display == ""){
-                modal.style.display = "flex"
-            }else{
-                modal.style.display = ""
-            }
-        })   
-    })
-}
 
-      function openModalDel(){
-       document.querySelectorAll(".deletar").forEach(btDel=>{
-        btDel.addEventListener("click",()=>{
-           if(modalDel.style.display==""){
-               modalDel.style.display = "flex"
-               console.log(btDel.parentNode.getAttribute("identifier"));
-               let friendID = btDel.parentNode.getAttribute("identifier")
-               let friend = listUser.find(cardID => cardID.id == friendID);
-               console.log(friend);
-               popularModalDelete(friend);
-           }else{
-               modalDel.style.display = ""
-           }
+    function openModalEdit(){
+        document.querySelectorAll(".editar").forEach(btEdit=>{
+            btEdit.addEventListener("click",()=>{
+                if(modal.style.display == ""){
+                    modal.style.display = "flex"
+                }else{
+                    modal.style.display = ""
+                }
+            })   
         })
-    })
-}
-      function popularModalDelete(friend){
+    }
+
+    function openModalDel(){
+       document.querySelectorAll(".deletar").forEach(btDel=>{
+            btDel.addEventListener("click",()=>{
+                if(modalDel.style.display==""){
+                    modalDel.style.display = "flex"
+                    console.log(btDel.parentNode.getAttribute("identifier"));
+                    let friendID = btDel.parentNode.getAttribute("identifier")
+                    let friend = listUser.find(cardID => cardID.id == friendID);
+                    console.log(friend);
+                    popularModalDelete(friend);
+                }else{
+                    modalDel.style.display = ""
+                }
+            })
+        })
+    }
+
+    function popularModalDelete(friend){
         let btDel = document.querySelector(".modal-container-del .btDel");
         let titulo = document.querySelector(".modal-container-del h3");
 
-        titulo.textContent = "Tem Certeza de que deseja excluir a inimiga "+friend.name+" ?";
+        titulo.textContent = "Tem certeza de que deseja excluir "+friend.name+" ?";
         btDel.setAttribute("identifier", friend.id);
 
         btDel.addEventListener("click",()=>{ 
@@ -95,7 +96,7 @@
             modalDel.style.display = ""
             deleteFriend(friend.id);     
         })       
-      }
+    }
 
     function closeModais(){
         document.querySelectorAll(".botaoFechar").forEach(btFecha=>{
