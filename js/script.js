@@ -1,5 +1,5 @@
 (()=>{
-    const baseURL =  "http://localhost:3000";
+    const baseURL =  "http://localhost:3003";
     let modalDel = document.querySelector("#modalDel")
     let modal = document.querySelector("#modal");
     let listUser = [];
@@ -9,13 +9,13 @@
         let response = await fetch(`${baseURL}/friends`);
         let userList = await response.json();
         listUser = userList;
-        console.log(userList);
 
         userList.forEach(friends=>{
             const card = document.createElement("div");
             const main = document.querySelector(".ListTable")
             
             card.classList.add("AskTips")
+            card.setAttribute("identifier",friends.id);
                   
             const name = document.createElement("p");
             name.classList.add("nome");
@@ -27,7 +27,6 @@
             email.textContent = friends.email;
             card.appendChild(email);
             
-           
             const gender = document.createElement("p");
             gender.classList.add("genero");
             gender.textContent = friends.gender;
@@ -57,20 +56,14 @@
     }
        function openModalEdit(){
         document.querySelectorAll(".editar").forEach(btEdit=>{
-            console.log("teste");
-            console.log(modal)
-       btEdit.addEventListener("click",()=>{
-            console.log("teste");
-            
+        btEdit.addEventListener("click",()=>{
+     
             if(modal.style.display == ""){
                 modal.style.display = "flex"
             }else{
                 modal.style.display = ""
             }
-    
-        })
-
-       
+        })   
     })
 }
 
@@ -79,13 +72,30 @@
         btDel.addEventListener("click",()=>{
            if(modalDel.style.display==""){
                modalDel.style.display = "flex"
+               console.log(btDel.parentNode.getAttribute("identifier"));
+               let friendID = btDel.parentNode.getAttribute("identifier")
+               let friend = listUser.find(cardID => cardID.id == friendID);
+               console.log(friend);
+               popularModalDelete(friend);
            }else{
                modalDel.style.display = ""
            }
         })
     })
 }
-      
+      function popularModalDelete(friend){
+        let btDel = document.querySelector(".modal-container-del .btDel");
+        let titulo = document.querySelector(".modal-container-del h3");
+
+        titulo.textContent = "Tem Certeza de que deseja excluir a inimiga "+friend.name+" ?";
+        btDel.setAttribute("identifier", friend.id);
+
+        btDel.addEventListener("click",()=>{ 
+            modalDel = document.querySelector(".modal-container-del");
+            modalDel.style.display = ""
+            deleteFriend(friend.id);     
+        })       
+      }
 
     function closeModais(){
         document.querySelectorAll(".botaoFechar").forEach(btFecha=>{
@@ -109,6 +119,13 @@
         })
     }
 
+
+    async function deleteFriend(userId){
+        let response = await fetch(`${baseURL}/friends/${userId}`, {
+            method: "DELETE",
+          });
+          userResponse = await response.json();
+    }
 
 
     function init(){
