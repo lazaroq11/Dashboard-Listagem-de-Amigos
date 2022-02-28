@@ -91,7 +91,7 @@ main {
   background-clip: content-box;
 }
 
-.ListTips {
+.ListTable__Tips {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,29 +112,29 @@ main {
   padding-top: 11.87px;
 }
 
-.ListTips .nome {
+.ListTable__Tips .ListTable__nome {
   width: 90px;
 }
 
-.ListTips .email {
+.ListTable__Tips .ListTable__email {
   width: 200px;
 }
 
-.ListTips .genero {
+.ListTable__Tips .ListTable__genero {
   width: 90px;
 }
 
-.ListTips .descricao {
+.ListTable__Tips .ListTable__descricao {
   width: 120px;
   margin-right: 15px;
 }
 
-.ListTips .editarT {
+.ListTable__Tips .ListTable__editarT {
   width: 37px;
   margin-right: 10px;
 }
 
-.ListTips .deletarT {
+.ListTable__Tips .ListTable__deletarT {
   width: 45px;
 }
 
@@ -161,28 +161,28 @@ main {
   font-weight: normal;
 }
 
-.AskTips .nome {
+.AskTips .ListTable__nome {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 90px;
 }
 
-.AskTips .email {
+.AskTips .ListTable__email {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 200px;
 }
 
-.AskTips .genero {
+.AskTips .ListTable__genero {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 90px;
 }
 
-.AskTips .descricao {
+.AskTips .ListTable__descricao {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -190,7 +190,7 @@ main {
   margin-right: 15px;
 }
 
-.AskTips .editar {
+.AskTips .ListTable__editar {
   cursor: pointer;
   width: 37px;
   margin-right: 10px;
@@ -270,11 +270,11 @@ form select {
   color: #EAE9E9;
 }
 
-select option {
+form select option {
   color: #FFFFFF;
 }
 
-#modal {
+.modal--edit {
   display: none;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.9);
@@ -282,7 +282,7 @@ select option {
   height: 720px;
 }
 
-.modal-content {
+.modal--edit .mE__content {
   position: absolute;
   background-color: #c4c4c4;
   display: -webkit-box;
@@ -304,7 +304,7 @@ select option {
   top: 176px;
 }
 
-.modal-content h3 {
+.modal--edit .mE__content h3 {
   margin-bottom: 76px;
   font-family: Roboto, sans-serif;
   font-size: 32px;
@@ -313,18 +313,39 @@ select option {
   text-align: center;
 }
 
-.labelInputColumn {
+.modal--edit .mE__content button {
+  width: 139px;
+  height: 25px;
+  background-color: #FFBE6B;
+  border-radius: 8px;
+  font-size: 16px;
+  padding-left: 10px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.modal--edit .mE__content form select {
+  background-color: #11055B;
+  width: 194px;
+  height: 18.31px;
+  border-radius: 4px;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  color: #EAE9E9;
+}
+
+.mE__labelInput {
   padding-right: 38px;
   padding-left: 31px;
   padding-bottom: 38px;
 }
 
-.labelInputColumn label {
+.mE__labelInput label {
   font-size: 16px;
   font-family: Roboto, sans-serif;
 }
 
-.labelInputColumn input {
+.mE__labelInput input {
   width: 194px;
   height: 18.75px;
   background-color: #ffffff;
@@ -336,18 +357,7 @@ select option {
   background-color: #11055B;
 }
 
-.modal-content button {
-  width: 139px;
-  height: 25px;
-  background-color: #FFBE6B;
-  border-radius: 8px;
-  font-size: 16px;
-  padding-left: 10px;
-  margin-left: 15px;
-  margin-top: 10px;
-}
-
-.duoForm {
+.mE__duoForm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -363,21 +373,11 @@ select option {
           align-items: center;
 }
 
-.modal-content form select {
-  background-color: #11055B;
-  width: 194px;
-  height: 18.31px;
-  border-radius: 4px;
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  color: #EAE9E9;
-}
-
-.duoForm select option {
+.mE__duoForm select option {
   color: #FFFFFF;
 }
 
-.botaoFechar {
+.mE__btnClose {
   position: absolute;
   color: #ffffff;
   background-color: #e12828;
@@ -392,18 +392,12 @@ select option {
   cursor: pointer;
 }
 
-#modalDel {
+.modal--delete {
   display: none;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.955);
   width: 1280px;
   height: 720px;
-}
-
-.modal-container-del {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -416,7 +410,7 @@ select option {
           align-items: center;
 }
 
-.modal-container-del h3 {
+.modal--delete h3 {
   font-size: 40px;
   font-family: Roboto, sans-serif;
   font-weight: bolder;
@@ -425,7 +419,7 @@ select option {
   padding-bottom: 190px;
 }
 
-.btsDel {
+.modal--delete .mD__btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,21 +435,23 @@ select option {
           justify-content: space-between;
 }
 
-.btDel {
+.modal--delete .mD__btns .mD__btnExc {
   background-color: #DC3741;
   border-radius: 8px;
   width: 140px;
   height: 57px;
+  font-size: 24px;
   border: none;
   color: #ffffff;
   margin-right: 316px;
 }
 
-.btCanc {
+.modal--delete .mD__btns .mD__btnCanc {
   background-color: #7066E0;
   border-radius: 8px;
   width: 140px;
   height: 57px;
+  font-size: 24px;
   border: none;
   font-weight: bolder;
   color: #000000;
