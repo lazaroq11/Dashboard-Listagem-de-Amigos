@@ -1,7 +1,7 @@
 (() => {
     const baseURL = "http://localhost:3003";
-    let modalDel = document.querySelector(".modal--delete")
-    let modal = document.querySelector(".modal--edit");
+    let modalDel = document.querySelector(".modalDelete")
+    let modal = document.querySelector(".modalEdit");
     let listUser = [];
 
 
@@ -14,7 +14,7 @@
             const card = document.createElement("div");
             const main = document.querySelector(".ListTable")
 
-            card.classList.add("AskTips")
+            card.classList.add("ListTable__AskTips")
             card.setAttribute("identifier", friends.id);
 
             const name = document.createElement("p");
@@ -72,10 +72,8 @@
             btDel.addEventListener("click", () => {
                 if (modalDel.style.display == "") {
                     modalDel.style.display = "flex"
-                    console.log(btDel.parentNode.getAttribute("identifier"));
                     let friendID = btDel.parentNode.getAttribute("identifier")
                     let friend = listUser.find(cardID => cardID.id == friendID);
-                    console.log(friend);
                     popularModalDelete(friend);
                 } else {
                     modalDel.style.display = ""
@@ -85,14 +83,13 @@
     }
 
     function popularModalDelete(friend) {
-        let btDel = document.querySelector(".modal--delete .mD__btnExc");
-        let titulo = document.querySelector(".modal--delete h3");
+        let btDel = document.querySelector(".modalDelete .mD__btnExc");
+        let titulo = document.querySelector(".modalDelete h3");
 
         titulo.textContent = "Tem certeza de que deseja excluir " + friend.name + " ?";
-        btDel.setAttribute("identifier", friend.id);
 
         btDel.addEventListener("click", () => {
-            modalDel = document.querySelector(".modal--delete");
+            modalDel = document.querySelector(".modalDelete");
             modalDel.style.display = ""
             deleteFriend(friend.id);
         })
@@ -109,7 +106,7 @@
             })
         })
 
-        document.querySelectorAll(".modal--delete .mD__btnCanc").forEach(btCanc => {
+        document.querySelectorAll(".modalDelete .mD__btnCanc").forEach(btCanc => {
             btCanc.addEventListener("click", () => {
                 if (modalDel.style.display == "") {
                     modalDel.style.display = "flex"
@@ -121,8 +118,8 @@
     }
 
 
-    async function deleteFriend(userId) {
-        let response = await fetch(`${baseURL}/friends/${userId}`, {
+    async function deleteFriend(friendId) {
+        let response = await fetch(`${baseURL}/friends/${friendId}`, {
             method: "DELETE",
         });
         userResponse = await response.json();

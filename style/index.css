@@ -41,17 +41,6 @@ main {
           flex-direction: column;
 }
 
-.ListForms {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-left: 59px;
-}
-
 .ListFriends {
   background-color: #474554;
   width: 1126px;
@@ -67,7 +56,18 @@ main {
   text-align: center;
 }
 
-.ListTable {
+.ListFriends .ListForms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 59px;
+}
+
+.ListFriends .ListForms .ListTable {
   width: 731px;
   height: 277px;
   padding-left: 10px;
@@ -77,21 +77,21 @@ main {
   overflow-y: auto;
 }
 
-.ListTable::-webkit-scrollbar-track {
+.ListFriends .ListForms .ListTable::-webkit-scrollbar-track {
   background-color: #EAE9E9;
   margin: 20px 0px 20px 0px;
 }
 
-.ListTable::-webkit-scrollbar {
+.ListFriends .ListForms .ListTable::-webkit-scrollbar {
   width: 13px;
 }
 
-.ListTable::-webkit-scrollbar-thumb {
+.ListFriends .ListForms .ListTable::-webkit-scrollbar-thumb {
   background: #272727;
   background-clip: content-box;
 }
 
-.ListTable__Tips {
+.ListFriends .ListForms .ListTable__Tips {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,33 +112,33 @@ main {
   padding-top: 11.87px;
 }
 
-.ListTable__Tips .ListTable__nome {
+.ListFriends .ListForms .ListTable__Tips .ListTable__nome {
   width: 90px;
 }
 
-.ListTable__Tips .ListTable__email {
+.ListFriends .ListForms .ListTable__Tips .ListTable__email {
   width: 200px;
 }
 
-.ListTable__Tips .ListTable__genero {
+.ListFriends .ListForms .ListTable__Tips .ListTable__genero {
   width: 90px;
 }
 
-.ListTable__Tips .ListTable__descricao {
+.ListFriends .ListForms .ListTable__Tips .ListTable__descricao {
   width: 120px;
   margin-right: 15px;
 }
 
-.ListTable__Tips .ListTable__editarT {
+.ListFriends .ListForms .ListTable__Tips .ListTable__editarT {
   width: 37px;
   margin-right: 10px;
 }
 
-.ListTable__Tips .ListTable__deletarT {
+.ListFriends .ListForms .ListTable__Tips .ListTable__deletarT {
   width: 45px;
 }
 
-.AskTips {
+.ListFriends .ListForms .ListTable__AskTips {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,34 +155,34 @@ main {
   padding-top: 11.87px;
 }
 
-.AskTips p {
+.ListFriends .ListForms .ListTable__AskTips p {
   font-size: 14px;
   line-height: 16px;
   font-weight: normal;
 }
 
-.AskTips .ListTable__nome {
+.ListFriends .ListForms .ListTable__AskTips .ListTable__nome {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 90px;
 }
 
-.AskTips .ListTable__email {
+.ListFriends .ListForms .ListTable__AskTips .ListTable__email {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 200px;
 }
 
-.AskTips .ListTable__genero {
+.ListFriends .ListForms .ListTable__AskTips .ListTable__genero {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 90px;
 }
 
-.AskTips .ListTable__descricao {
+.ListFriends .ListForms .ListTable__AskTips .ListTable__descricao {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -190,18 +190,18 @@ main {
   margin-right: 15px;
 }
 
-.AskTips .ListTable__editar {
+.ListFriends .ListForms .ListTable__AskTips .ListTable__editar {
   cursor: pointer;
   width: 37px;
   margin-right: 10px;
 }
 
-.AskTips .deletar {
+.ListFriends .ListForms .ListTable__AskTips .ListTable__deletar {
   cursor: pointer;
   width: 45px;
 }
 
-form {
+.ListFriends .ListForms form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,7 +221,7 @@ form {
   padding-left: 13px;
 }
 
-form button {
+.ListFriends .ListForms form button {
   background-color: #FFBE6B;
   width: 103px;
   height: 25px;
@@ -234,7 +234,7 @@ form button {
   margin-top: 10px;
 }
 
-form input {
+.ListFriends .ListForms form input {
   background-color: #11055B;
   width: 210px;
   height: 18.31px;
@@ -244,23 +244,23 @@ form input {
   margin-bottom: 2px;
 }
 
-form label {
+.ListFriends .ListForms form label {
   margin-bottom: 2px;
   padding-top: 17px;
 }
 
-form span {
+.ListFriends .ListForms form span {
   color: #DA1111;
 }
 
-form p {
+.ListFriends .ListForms form p {
   margin-top: 2px;
   color: #DA1111;
   font-size: 11px;
   display: none;
 }
 
-form select {
+.ListFriends .ListForms form select {
   background-color: #11055B;
   width: 210px;
   height: 18.31px;
@@ -270,11 +270,11 @@ form select {
   color: #EAE9E9;
 }
 
-form select option {
+.ListFriends .ListForms form select option {
   color: #FFFFFF;
 }
 
-.modal--edit {
+.modalEdit {
   display: none;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.9);
@@ -282,7 +282,7 @@ form select option {
   height: 720px;
 }
 
-.modal--edit .mE__content {
+.modalEdit .mE__content {
   position: absolute;
   background-color: #c4c4c4;
   display: -webkit-box;
@@ -304,7 +304,7 @@ form select option {
   top: 176px;
 }
 
-.modal--edit .mE__content h3 {
+.modalEdit .mE__content h3 {
   margin-bottom: 76px;
   font-family: Roboto, sans-serif;
   font-size: 32px;
@@ -313,18 +313,21 @@ form select option {
   text-align: center;
 }
 
-.modal--edit .mE__content button {
-  width: 139px;
-  height: 25px;
-  background-color: #FFBE6B;
-  border-radius: 8px;
-  font-size: 16px;
-  padding-left: 10px;
-  margin-left: 15px;
-  margin-top: 10px;
+.modalEdit .mE__content .mE__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
-.modal--edit .mE__content form select {
+.modalEdit .mE__content .mE__form select {
   background-color: #11055B;
   width: 194px;
   height: 18.31px;
@@ -332,6 +335,17 @@ form select option {
   font-family: Roboto, sans-serif;
   font-size: 12px;
   color: #EAE9E9;
+}
+
+.modalEdit .mE__content .mE__form button {
+  width: 139px;
+  height: 25px;
+  background-color: #FFBE6B;
+  border-radius: 8px;
+  font-size: 16px;
+  padding-left: 10px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 .mE__labelInput {
@@ -373,7 +387,7 @@ form select option {
           align-items: center;
 }
 
-.mE__duoForm select option {
+.mE__duoForm option {
   color: #FFFFFF;
 }
 
@@ -392,7 +406,7 @@ form select option {
   cursor: pointer;
 }
 
-.modal--delete {
+.modalDelete {
   display: none;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.955);
@@ -410,7 +424,7 @@ form select option {
           align-items: center;
 }
 
-.modal--delete h3 {
+.modalDelete h3 {
   font-size: 40px;
   font-family: Roboto, sans-serif;
   font-weight: bolder;
@@ -419,7 +433,7 @@ form select option {
   padding-bottom: 190px;
 }
 
-.modal--delete .mD__btns {
+.modalDelete .mD__btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -435,7 +449,7 @@ form select option {
           justify-content: space-between;
 }
 
-.modal--delete .mD__btns .mD__btnExc {
+.modalDelete .mD__btns .mD__btnExc {
   background-color: #DC3741;
   border-radius: 8px;
   width: 140px;
@@ -444,9 +458,10 @@ form select option {
   border: none;
   color: #ffffff;
   margin-right: 316px;
+  cursor: pointer;
 }
 
-.modal--delete .mD__btns .mD__btnCanc {
+.modalDelete .mD__btns .mD__btnCanc {
   background-color: #7066E0;
   border-radius: 8px;
   width: 140px;
