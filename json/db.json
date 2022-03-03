@@ -1,0 +1,25 @@
+{
+  "friends": [
+    {
+      "id": 3,
+      "name": "Vitor Manoel",
+      "email": "vitorM2000@gmail.com",
+      "description": "O mais lindo da call '-'",
+      "gender": "Masculino"
+    },
+    {
+      "id": 4,
+      "name": "Ludmila Brito",
+      "email": "lubrito123@gmail.com",
+      "description": "Pina todas - vulgo binária",
+      "gender": "Feminino"
+    },
+    {
+      "id": 5,
+      "name": "Caio Bruno",
+      "email": "caiobrunopittaf@gmail.com",
+      "description": "O mestre do FrontEnd - Bad Luck For You",
+      "gender": "Masculino"
+    }
+  ]
+}

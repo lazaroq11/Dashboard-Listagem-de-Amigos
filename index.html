@@ -1,87 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/index.css" />
 
-    <link rel = "stylesheet" href="./style/index.css"/>
-    
-    <title>Devedores</title>
-   
+  <title>Devedores</title>
+
 </head>
+
 <body>
-    <h1>Dashboard</h1>
-   <main>
-       <section class ="ListFriends">
-           <h2>Listagem de amigos</h2>
-         <div class="ListForms">
-         <div class="ListTable">  
-         <div class="ListTips">
-            <p class="nome">Nome</p>
-            <p class="email">Email</p>
-            <p class="genero">Gênero</p>
-            <p class="descricao">Descrição</p>
-            <p class="editar">Editar</p>
-            <p class="deletar">Deletar</p>
-         </div>           
-    </div>  
-    
-        <form  class = "formEdit" name="formEdit">
-            <label>Nome<span>*</span></label>
-            <input type = "text" name="nameEdit"></input>
-            <p class="reqCamp">Campo Obrigatório</p>
+  <h1>Dashboard</h1>
+  <main>
+    <section class="ListFriends">
+      <h2>Listagem de amigos</h2>
+      <div class="ListForms">
+        <div class="ListTable">
+          <div class="ListTable__Tips">
+            <p class="ListTable__nome">Nome</p>
+            <p class="ListTable__email">Email</p>
+            <p class="ListTable__genero">Gênero</p>
+            <p class="ListTable__descricao">Descrição</p>
+            <p class="ListTable__editarT">Editar</p>
+            <p class="ListTable__deletarT">Deletar</p>
+          </div>
+        </div>
 
-            <label>Email<span>*</span></label>
-            <input type = "text" name="emailEdit"></input>
-            <p class="reqCamp">Campo Obrigatório</p>
+        <form class="formEdit" name="formEdit">
+          <label>Nome<span>*</span></label>
+          <input type="text" name="nameEdit"></input>
+          <p class="formEdit__reqCamp">Campo Obrigatório</p>
 
-            <label>Gênero<span>*</span></label>
-            <select name="genero">
-              <option value=""></option>
-              <option value="masc">Masculino</option>
-              <option value="fem">Feminino</option>
-              <option value="outro">Outro</option>
-            </select>
-            
-            <label>Descrição<span>*</span></label>
-            <input type = "text" name="descEdit"></input>
-            <p class="reqCamp">Campo Obrigatório</p>
-            
-            <button class="btCad" type="submit">Cadastrar</button>
-        </form>  
-    </div>  
+          <label>Email<span>*</span></label>
+          <input type="text" name="emailEdit"></input>
+          <p class="formEdit__reqCamp">Campo Obrigatório</p>
+
+          <label>Gênero<span>*</span></label>
+          <select name="genero">
+            <option value=""></option>
+            <option value="masc">Masculino</option>
+            <option value="fem">Feminino</option>
+            <option value="outro">Outro</option>
+          </select>
+
+          <label>Descrição<span>*</span></label>
+          <input type="text" name="descEdit"></input>
+          <p class="formEdit__reqCamp">Campo Obrigatório</p>
+
+          <button class="formEdit__btCad" type="submit">Cadastrar</button>
+        </form>
+      </div>
     </section>
 
+    <div class="modalEdit">
+      <div class="mE__content">
+        <h3>Editar os dados de Caio Bruno</h1>
 
-
-    <div class="modal-container" id="modal">
-        <div class="modal-content">
-          <h3>Editar os dados de Caio Bruno</h1>
-
-          <form class="formModalEdit">
-            <div class="duoForm">
-              <div class="labelInputColumn">
+          <form class="mE__form">
+            <div class="mE__duoForm">
+              <div class="mE__labelInput">
                 <label for="Email">Nome</label>
                 <input type="email" name="Email" />
               </div>
 
-              <div class="labelInputColumn">
+              <div class="mE__labelInput">
                 <label for="confEmail">Descrição</label>
                 <input type="email" name="confEmail" />
               </div>
             </div>
 
-            <div class="duoForm">
-              <div class="labelInputColumn">
+            <div class="mE__duoForm">
+              <div class="mE__labelInput">
                 <label for="Password">Email</label>
                 <input type="password" name="Password" />
               </div>
 
-              <div class="labelInputColumn">
+              <div class="mE__labelInput">
                 <label for="confPasswrd">Gênero</label>
                 <select name="genero">
                   <option value=""></option>
@@ -91,27 +90,27 @@
                 </select>
               </div>
             </div>
-
             <button>Alterar dados</button>
           </form>
-        </div>
-        <a class="botaoFechar"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M19.3334 2.54669L17.4534 0.666687L10 8.12002L2.54669 0.666687L0.666687 2.54669L8.12002 10L0.666687 17.4534L2.54669 19.3334L10 11.88L17.4534 19.3334L19.3334 17.4534L11.88 10L19.3334 2.54669Z" fill="white"/>
-          </svg>
-            </a>
       </div>
+      <a class="mE__btnClose">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M19.3334 2.54669L17.4534 0.666687L10 8.12002L2.54669 0.666687L0.666687 2.54669L8.12002 10L0.666687 17.4534L2.54669 19.3334L10 11.88L17.4534 19.3334L19.3334 17.4534L11.88 10L19.3334 2.54669Z"
+            fill="white" />
+        </svg>
+      </a>
+    </div>
 
-
-      
-    <div class="modal-container-del" id="modalDel">
-          <h3>Tem Certeza de que deseja excluir a inimiga Ludmilla?</h1>
-         <div class="btsDel">
-          <button class="btDel">Excluir</button>
-          <button class="btCanc">Cancelar</button>
-          
+    <div class="modalDelete">
+      <h3>Tem Certeza de que deseja excluir a inimiga Ludmilla?</h3>
+      <div class="mD__btns">
+        <button class="mD__btnExc">Excluir</button>
+        <button class="mD__btnCanc">Cancelar</button>
       </div>
-   </main>    
-   <script src="./js/script.js"></script>
+    </div>
+  </main>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
